@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+    - main
+jobs:
+  my_job:
+    name: deploy
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false 
+      - name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.10.0"
+      - name: install and build
+        run: |
+          yarn install
+          yarn build
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          folder: /pages
+          branch: main
+          
