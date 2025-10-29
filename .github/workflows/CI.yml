@@ -21,6 +21,6 @@ jobs:
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          folder: /pages
-          branch: main
+          folder: pages
+          branch: static-pages
           
