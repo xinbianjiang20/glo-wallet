@@ -18,7 +18,6 @@ jobs:
       - name: install and build
         run: |
           npm install
-          next build /pages
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
