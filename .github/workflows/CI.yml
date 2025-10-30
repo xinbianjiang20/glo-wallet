@@ -22,6 +22,6 @@ jobs:
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          folder: pages
-          branch: static-pages
+          folder: ${{github.workspace}}/.next
+          branch: static-pages1
           
